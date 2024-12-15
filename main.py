@@ -3,8 +3,8 @@ import requests
 import pandas as pd
 import time
 
-BLAND_API_KEY = ''
-GROK_API_KEY = ''
+BLAND_API_KEY = 'org_8eabc93849311b46844d2ff69b684f544bf7adb1ed6a4b93b328e92791bfa79e1909301b43eadc679bde69'
+GROK_API_KEY = 'xai-CDqxS2N84swMdjSuYJFiqLs6jl1zqOgbpNBG8JmXJ7LXxeNQ0ziRylXX9mcs6o5i3eo720x1CdMwjsTa'
 
 # Mock user credentials for authentication
 USER_CREDENTIALS = {
@@ -293,13 +293,11 @@ def main():
         st.session_state["username"] = None
 
     if not st.session_state["logged_in"]:
+        st.sidebar.title("Configuration")
         st.sidebar.text('user1')
         st.sidebar.text('pass456')
+                
         
-        st.sidebar.title("Configuration")
-        GROK_API_KEY = st.sidebar.text_input("Grok API Key", type="password", key="grok_key")
-        BLAND_API_KEY = st.sidebar.text_input("Bland API Key", type="password", key="bland_key")
-
     if st.session_state["logged_in"]:
         st.sidebar.write(f"Logged in as: {st.session_state['username']}")
         st.sidebar.button("Logout", on_click=logout)
