@@ -6,6 +6,8 @@ import time
 BLAND_API_KEY = 'org_8eabc93849311b46844d2ff69b684f544bf7adb1ed6a4b93b328e92791bfa79e1909301b43eadc679bde69'
 GROK_API_KEY = 'xai-CDqxS2N84swMdjSuYJFiqLs6jl1zqOgbpNBG8JmXJ7LXxeNQ0ziRylXX9mcs6o5i3eo720x1CdMwjsTa'
 
+LOGO_PATH = "logo.png"
+
 # Mock user credentials for authentication
 USER_CREDENTIALS = {
     "admin": "password123",
@@ -213,10 +215,8 @@ def dashboard():
     st.sidebar.checkbox("Taxpayer Identification Number")
     st.sidebar.checkbox("Veterans Affairs")
     st.sidebar.checkbox("Employment and Training Administration")
-    
-    """
-    Displays the dashboard after user login.
-    """
+    st.image(LOGO_PATH, width=150)
+  
     st.markdown("""
     <style>
     .main-title {
