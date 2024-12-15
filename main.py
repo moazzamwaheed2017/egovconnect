@@ -13,7 +13,7 @@ USER_CREDENTIALS = {
 }
 
 # File for citizen data (already uploaded)
-FILE_PATH = r'data/New_Jersey_Insurance_Residents_With_SSN.xlsx'
+FILE_PATH = r'New_Jersey_Insurance_Residents_With_SSN.xlsx'
 
 def process_citizen_data(file_path):
     """
