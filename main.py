@@ -28,8 +28,6 @@ def process_citizen_data(file_path):
     except Exception as e:
         raise Exception(f"Error reading Excel file: {e}")
 
-import requests
-import pandas as pd
 
 def call_grok_api(ssn, citizen_data):
     """
